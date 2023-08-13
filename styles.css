@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.container{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/** Banner Styling **/
+
+.banner{
+    width: 100%;
+    background-color: #163651;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.banner-left{
+    display:flex;
+    margin-left: 2.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner-card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #F2EFE6;
+    gap: 0.2rem;
+    font-size: 0.9rem;
+    border-right: 1px solid #F2EFE6;
+    padding: 0 1rem;
+}
+.banner-card:first-of-type{
+    padding: unset;
+    padding-right: 1rem;
+}
+.banner-card i{
+    color: #40A5A2;
+    font-size: 0.8rem;
+}
+.banner-card p{
+    letter-spacing: 0.3px;
+}
+.banner-card:last-of-type{
+    border-right: unset;
+}
+.banner-right{
+    width: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2.5rem;
+}
+.banner-right a{
+    color: #F2EFE6;
+    font-size: 1.1rem;
+    transition: color 0.4s;
+}
+.banner-right a:hover{
+    color: orangered;
+}
+
+/** Navbar Section Styling **/
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    align-items: center;
+    height: 4.5rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 18px #000000;
+}
+.navbar-left{
+    display: flex;
+    align-items: center;
+}
+.navbar-left img{
+    height: 2.25rem;
+    width: 2rem
+}
+.navbar-right{
+    width: 45.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-right a{
+    color: #091520;
+    text-decoration: none;
+}
+.menu{
+    display:none;
+}
+.close{
+    display: none;
+}
+
+/** Hero Section Styling **/
+
+.hero-section{
+    width: 100%;
+    height: 41rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 2.5rem;
+    background-image: url('bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Inter', sans-serif;
+}
+.hero-section-left{
+    width: 36.3rem;
+    color: #FFFFFF;
+    display: flex;
+    gap: 1.2rem;
+    flex-direction: column;
+}
+.hero-section .hero-leftHeading{
+    font-size: 3.7rem;
+    font-weight: 700;
+    line-height: 4.2rem;
+}
+.hero-para{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+}
+.hero-section .hero-leftButton{
+    width: 8rem;
+    background-color: #40A5A2;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.15s ease-in;
+}
+.btn:active{
+    transform: scale(0.9);
+}
+.hero-section-right{
+    width: 22.8rem;
+    padding: 1.5rem;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 8px 24px -4px #18274B,
+    0 4px 12px -6px #18274B;
+    justify-content: center;
+    align-items: center;
+}
+.hero-section-right div{
+    width: 100%;
+}
+.hero-section-right h1{
+    font-size: 1.55rem;
+    font-weight: 600;
+}
+.hero-section-right form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+form div{
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.32rem;
+    color: #091520;
+}
+form div label{
+    margin-left: 0.2rem;
+}
+form div input[type='text']{
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid #c4c4c4;
+    border-radius: 1.25rem;
+    margin-top: 0.2rem;
+    padding-left: 0.3rem;
+    font-size: 0.9rem;
+}
+#TC{
+    color: #00A5DF;
+}
+input[type='checkbox']{
+    appearance: none;
+    height: 1.25rem;
+    width: 1.25rem;
+    border: 1px solid #c4c4c4;
+    position: relative;
+    cursor: pointer;
+}
+input[type='checkbox']:checked{
+    background-color: #627089;
+}
+input[type='checkbox']:checked::before{
+    content: '\2713';
+    position: absolute;
+    left: 0.31rem;
+    color: #FFFFFF;
+}
+.hero-rightButton{
+    background-color: #02274C;
+    width: 6.5rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 1.5rem;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: none;
+    transition: transform 0.15s;
+}
+
+/** Footer Styling **/
+
+.footer{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10.4rem 2.5rem;
+    font-family: 'Inter', sans-serif;
+    background-color: #F0F9F9;
+}
+.footer-card{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.footer-image{
+    background-color: #40A5A2;
+    border-radius: 50%;
+    color: #FFFFFF;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-image img{
+    width: 1.9rem;
+    height: 2.5rem;
+}
+.footer-text > p{
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #091520;
+    margin-bottom: 1.4rem;
+}
+.footer-text p:last-of-type{
+    font-weight: 400;
+    font-size: 1rem;
+    color: #091520;
+}
+
+/** media Queries For Responsivness **/
+
+@media screen and (max-width:1280px) {
+    .container{
+        width: 100vw;
+    }
+}
+@media screen and (max-width: 1040px) {
+    html{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 857px) {
+    html{
+        font-size: 10px;
+    }
+    input[type='checkbox']:checked::before{
+        left: 0.1rem;
+        top: -0.2rem;
+    }
+}
+@media screen and (max-width:590px){
+    html{
+        font-size: 7px
+    }
+     .navbar-right{
+        transform: translate(100px);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: none;
+     }
+     .menu{
+        display: inline;
+     }  
+     .navbar-right.active{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transform: translate(0);
+        z-index: 1;
+        background-color: black;
+     }
+     .navbar-right a{
+        color:white;
+     }
+}
